@@ -2,4 +2,5 @@
 lyc-manager.iml
 lyc-manager-dao/lyc-manager-dao.iml
 lyc-manager-domain/lyc-manager-domain.iml
+lyc-manager-service/lyc-manager-service.iml
 .idea/
