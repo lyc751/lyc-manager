@@ -22,6 +22,12 @@ public class Role {
     @ManyToMany(mappedBy = "roles")
     private Set<User> users = new HashSet<User>();
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "t_role_perm",
+            joinColumns = {@JoinColumn(name = "role_id")},
+            inverseJoinColumns = {@JoinColumn(name = "perm_id")})
+    private Set<Permission> permissions = new HashSet<Permission>();
+
     public Integer getId() {
         return id;
     }
